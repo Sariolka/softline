@@ -1,0 +1,26 @@
+/* 'Proxima Nova Condensed' 400 */
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('Proxima-Regular'),
+        url('ProximaNovaCond-Regular.woff2') format('woff2'),
+        local('Proxima-Regular'),
+        url('ProximaNovaCond-Regular.woff') format('woff');
+}
+
+/* 'Proxima Nova Condensed' 600 */
+
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        local('Proxima-SemiBold'),
+        url('ProximaNovaCond-Semibold.woff2') format('woff2'),
+        local('Proxima-SemiBold'),
+        url('ProximaNovaCond-Semibold.woff') format('woff');
+}
