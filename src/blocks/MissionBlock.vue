@@ -24,8 +24,9 @@
     color: var(--base-white);
     position: relative;
     z-index: 0;
-    padding: 139px 70px;
+    padding: 139px 70px 138px;
     overflow: hidden;
+    margin-bottom: 100px;
 
     &::before {
         content: '';
@@ -41,12 +42,13 @@
 
     &__title {
         @include mixins.base--typography(56px, 100%, 600);
-        margin-bottom: 40px;
+        margin-bottom: 42px;
     }
 
     &__description {
         @include mixins.base--typography(32px, 150%, 400);
         text-align: center;
+        text-indent: 6px;
     }
 
     &__pattern {
@@ -56,12 +58,12 @@
         opacity: 0.4;
 
         &_type-left {
-            left: -48px;
+            left: -25px;
         }
 
         &_type-right {
             transform: rotate(180deg);
-            right: -48px;
+            right: -27px;
         }
     }
 }

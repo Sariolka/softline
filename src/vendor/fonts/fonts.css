@@ -24,3 +24,17 @@
         local('Proxima-SemiBold'),
         url('ProximaNovaCond-Semibold.woff') format('woff');
 }
+
+/* 'Proxima Nova Condensed' 700 */
+
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        local('Proxima-Bold'),
+        url('ProximaNovaCond-Bold.woff2') format('woff2'),
+        local('Proxima-Bold'),
+        url('ProximaNovaCond-Bold.woff') format('woff');
+}

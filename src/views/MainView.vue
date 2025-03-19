@@ -1,16 +1,23 @@
 <script setup lang="ts">
 import MissionBlock from '@/blocks/MissionBlock.vue';
-import TrendsCard from '@/components/TrendsCard.vue';
-import img from '@/images/transform.png';
+import TrendsBlock from '@/blocks/TrendsBlock.vue';
+import BenefitsBlock from '@/blocks/BenefitsBlock.vue';
+import HeaderBlock from '@/blocks/HeaderBlock.vue';
+import SoftlineBlock from '@/blocks/AboutBlock.vue';
+import GalleryBlock from '@/blocks/GalleryBlock.vue';
 </script>
 
 <template>
-    <MissionBlock />
-    <TrendsCard
-        :image="`url(${img})`"
-        title="Кибербезопасность"
-        description="ГК Softline предлагает клиентам собственную линейку оборудования (ПК, серверы, торговое оборудование и проч.), разработку программных продуктов, облачных решений, решений в области информационной безопасности."
-    />
+    <section class="page">
+        <HeaderBlock />
+        <main class="main">
+            <SoftlineBlock />
+            <MissionBlock />
+            <TrendsBlock />
+            <BenefitsBlock />
+            <GalleryBlock />
+        </main>
+    </section>
 </template>
 
 <style scoped lang="scss"></style>

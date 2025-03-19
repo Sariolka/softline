@@ -11,16 +11,14 @@ const isHovered = ref(false);
 </script>
 
 <template>
-    <div
+    <li
         class="trend-card"
-        :style="{ backgroundImage: image }"
+        :style="{ backgroundImage: `url(${image})` }"
         @mouseenter="isHovered = true"
         @mouseleave="isHovered = false"
     >
         <div class="trend-card__content" :class="{ 'trend-card__content_open': isHovered }">
-            <div
-                class="trend-card__overlay"
-            ></div>
+            <div class="trend-card__overlay"></div>
             <h3 class="trend-card__title">{{ title }}</h3>
             <p
                 class="trend-card__description"
@@ -29,7 +27,7 @@ const isHovered = ref(false);
                 {{ description }}
             </p>
         </div>
-    </div>
+    </li>
 </template>
 
 <style scoped lang="scss">
@@ -61,16 +59,23 @@ const isHovered = ref(false);
 
     &__content {
         width: 100%;
-        padding: 28px 20px;
         transition: max-height 0.3s ease;
         max-height: 80px;
+        height: 100%;
         transform-origin: bottom;
         position: relative;
         z-index: 2;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+
         &_open {
             max-height: 260px;
             height: 100%;
+            justify-content: start;
+            padding-top: 28px;
         }
     }
 
