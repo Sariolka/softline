@@ -26,6 +26,7 @@ const additionals = ADDITIONAL_DATA;
                 :caption="item.caption"
                 v-for="(item, index) in additionals"
                 :key="index"
+                class="compensation-block__li-item"
             />
         </ul>
     </section>
@@ -40,15 +41,27 @@ const additionals = ADDITIONAL_DATA;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 30px;
+    padding: 80px 30px 40px;
     background-color: var(--base-white);
     box-shadow: 0 0 40px 0 #0000000f;
     margin-left: 70px;
     margin-right: 70px;
 
+    @media screen and (max-width: 719px) {
+        padding: 20px 0 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
     &__title {
         @include mixins.base--typography(56px, 100%, 600);
         margin-bottom: 50px;
+        text-align: center;
+
+        @media screen and (max-width: 719px) {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
     }
 
     &__divider {
@@ -57,6 +70,10 @@ const additionals = ADDITIONAL_DATA;
         color: var(--base-black);
         height: 1px;
         margin-bottom: 91px;
+
+        @media screen and (max-width: 719px) {
+            margin-bottom: 22px;
+        }
     }
 
     &__list {
@@ -65,6 +82,19 @@ const additionals = ADDITIONAL_DATA;
         align-items: start;
         gap: 16px;
         margin-bottom: 50px;
+
+        @media screen and (max-width: 1279px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px 16px;
+        }
+
+        @media screen and (max-width: 719px) {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px 11px;
+            margin-bottom: 22px;
+        }
     }
 
     &__additional {
@@ -72,12 +102,26 @@ const additionals = ADDITIONAL_DATA;
         max-width: 639px;
         margin-bottom: 4px;
         text-align: center;
+
+        @media screen and (max-width: 719px) {
+            font-size: 22px;
+            margin-bottom: 2px;
+        }
     }
 
     &__span {
         color: var(--red-text-color);
         @include mixins.base--typography(40px, 120%, 600);
         margin-bottom: 50px;
+
+        @media screen and (max-width: 719px) {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__li-item {
+        width: 94px;
     }
 }
 </style>

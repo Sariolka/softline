@@ -4,7 +4,7 @@ import img3 from '../images/import_substitution.png';
 import img4 from '../images/cloud_solutions.png';
 import img5 from '../images/transform.png';
 import img6 from '../images/solutions.png';
-//-----------------------------------------
+//------------------------------------------
 import med from '../images/icons/med.svg';
 import bd from '../images/icons/bday.svg';
 import phone from '../images/icons/phone.svg';
@@ -18,6 +18,16 @@ import slide2 from '../images/Слайд2.png';
 import slide3 from '../images/Слайд3.png';
 import slide4 from '../images/Слайд4.png';
 import slide5 from '../images/Слайд5.png';
+//------------------------------------------
+import all from '../images/all.png';
+import moscow from '../images/moscow.png';
+import centre from '../images/centre.png';
+import volga from '../images/volga.png';
+import fareast from '../images/thefareast.png';
+import south from '../images/south.png';
+import ural from '../images/ural.png';
+import siberia from '../images/siberia.png';
+import north from '../images/northwest.png';
 
 export const TRENDS_DATA = [
     {
@@ -96,4 +106,63 @@ export const ADDITIONAL_DATA = [
     }
 ];
 
-export const SLIDE_DATA = [slide1, slide2, slide3, slide4, slide5];
+export const SLIDE_DATA = [slide2, slide1, slide3, slide4, slide5];
+
+export const MAP_DATA = [
+    {
+        image: all,
+        text: 'Офисы во всех регионах',
+        select: 'all'
+    },
+    {
+        image: moscow,
+        text: 'Офисы в Москве',
+        select: 'Moscow'
+    },
+    {
+        image: centre,
+        text: 'Офисы в Центральном регионе',
+        select: 'Centre'
+    },
+    {
+        image: north,
+        text: 'Офисы на Северо-Западе',
+        select: 'northwest'
+    },
+    {
+        image: south,
+        text: 'Офисы на Юге',
+        select: 'south'
+    },
+    {
+        image: volga,
+        text: 'Офисы на Волге',
+        select: 'Volga'
+    },
+    {
+        image: ural,
+        text: 'Офисы на Урале',
+        select: 'Ural'
+    },
+    {
+        image: siberia,
+        text: 'Офисы в Сибири',
+        select: 'Siberia'
+    },
+    {
+        image: fareast,
+        text: 'Офисы на Дальнем востоке',
+        select: 'The Far East'
+    }
+];
+
+export const CITIES_DATA = {
+    Москва: [],
+    Центр: ['Воронеж', 'Ярославль', 'Белгород'],
+    'Северо-Запад': ['Санкт-Петербург', 'Калининград'],
+    Юг: ['Ростов-на-Дону', 'Краснодар', 'Волгоград'],
+    Волга: ['Казань', 'Самара', 'Уфа', 'Оренбург', 'Нижний Новгород'],
+    Урал: ['Екатеринбург', 'Челябинск', 'Пермь', 'Сургут', 'Тюмень', 'Ижевск'],
+    Сибирь: ['Новосибирск', 'Омск', 'Томск', 'Красноярск', 'Иркутск'],
+    'Дальний Восток': ['Хабаровск', 'Владивосток']
+};

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 const props = defineProps<{
     image: string;
@@ -8,21 +8,56 @@ const props = defineProps<{
 }>();
 
 const isHovered = ref(false);
+const isMobile = ref(false);
+const isOpen = ref(false);
+
+const checkScreenWidth = () => {
+    isMobile.value = window.innerWidth < 700;
+};
+
+onMounted(() => {
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', checkScreenWidth);
+});
 </script>
 
 <template>
     <li
         class="trend-card"
+        :class="{ 'trend-card_open': isOpen }"
         :style="{ backgroundImage: `url(${image})` }"
-        @mouseenter="isHovered = true"
-        @mouseleave="isHovered = false"
+        @mouseenter="!isMobile && (isHovered = true)"
+        @mouseleave="!isMobile && (isHovered = false)"
+        @click="isMobile && (isOpen = !isOpen)"
     >
-        <div class="trend-card__content" :class="{ 'trend-card__content_open': isHovered }">
+        <div
+            class="trend-card__content"
+            :class="{
+                'trend-card__content_open': isHovered,
+                'trend-card__content_type-mobile': isMobile,
+                'trend-card__content_type-mobile_open': isMobile && isOpen
+            }"
+        >
             <div class="trend-card__overlay"></div>
-            <h3 class="trend-card__title">{{ title }}</h3>
+            <div class="trend-card__head">
+                <h3 class="trend-card__title">{{ title }}</h3>
+                <button
+                    class="trend-card__btn-open"
+                    aria-label="Открыть описание"
+                    :class="{ rotate: isOpen && isMobile }"
+                ></button>
+            </div>
             <p
                 class="trend-card__description"
-                :class="{ 'trend-card__description_open': isHovered }"
+                :class="{
+                    'trend-card__description_open': isHovered,
+                    'trend-card__description_type-mobile': isMobile,
+                    'trend-card__description_type-mobile_open': isMobile && isOpen
+                }"
             >
                 {{ description }}
             </p>
@@ -48,6 +83,27 @@ const isHovered = ref(false);
     position: relative;
     z-index: 0;
 
+    @media screen and (max-width: 719px) {
+        width: 280px;
+        height: 60px;
+        transition: height 0.3s ease;
+        transform-origin: top;
+        cursor: default;
+    }
+
+    @media screen and (max-width: 585px) {
+        min-width: 280px;
+        width: 90%;
+        height: 60px;
+        transition: height 0.3s ease;
+        transform-origin: top;
+        cursor: default;
+    }
+
+    &_open {
+        height: 240px;
+    }
+
     &__title {
         width: 100%;
         @include mixins.base--typography(24px, 100%, 600);
@@ -55,6 +111,10 @@ const isHovered = ref(false);
         position: relative;
         z-index: 2;
         max-width: 358px;
+
+        @media screen and (max-width: 719px) {
+            font-size: 20px;
+        }
     }
 
     &__content {
@@ -76,6 +136,18 @@ const isHovered = ref(false);
             height: 100%;
             justify-content: start;
             padding-top: 28px;
+        }
+
+        &_type-mobile {
+            transform-origin: top;
+            padding-left: 10px;
+            max-height: 60px;
+        }
+
+        &_type-mobile_open {
+            max-height: 240px;
+            justify-content: start;
+            padding-top: 22px;
         }
     }
 
@@ -104,10 +176,56 @@ const isHovered = ref(false);
         z-index: 2;
         max-width: 480px;
         margin-top: 0;
+
         &_open {
             @include mixins.base--typography(17px, 140%, 400);
             opacity: 1;
             margin-top: 40px;
+        }
+
+        &_type-mobile {
+            transition: transform 0.3s ease;
+            transform-origin: top;
+            transform: scaleY(0);
+            display: block;
+        }
+
+        &_type-mobile_open {
+            @include mixins.base--typography(16px, 140%, 400);
+            @media screen and (max-width: 719px) {
+                transform: scaleY(1);
+                opacity: 1;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__head {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 719px) {
+            justify-content: space-between;
+            padding-right: 13px;
+        }
+    }
+
+    &__btn-open {
+        display: none;
+
+        @media screen and (max-width: 719px) {
+            display: inline-flex;
+            background-image: url('@/images/icons/dropdown-white.svg');
+            border: none;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 18px;
+            height: 8px;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
         }
     }
 }

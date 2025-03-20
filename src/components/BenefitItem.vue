@@ -27,6 +27,10 @@ const props = defineProps<{
     flex-direction: column;
     justify-content: center;
 
+    @media screen and (max-width: 719px) {
+        width: 120px;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -43,11 +47,19 @@ const props = defineProps<{
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 719px) {
+            width: 80px;
+            height: 80px;
+        }
     }
 
     &__icon {
         object-fit: contain;
         object-position: center;
+        @media screen and (max-width: 719px) {
+            height: 34.9px;
+        }
     }
 
     &__description {
@@ -56,6 +68,10 @@ const props = defineProps<{
         text-align: center;
         white-space: pre-line;
         text-indent: -1px;
+
+        @media screen and (max-width: 719px) {
+            font-size: 16px;
+        }
     }
 }
 </style>

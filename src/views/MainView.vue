@@ -3,8 +3,9 @@ import MissionBlock from '@/blocks/MissionBlock.vue';
 import TrendsBlock from '@/blocks/TrendsBlock.vue';
 import BenefitsBlock from '@/blocks/BenefitsBlock.vue';
 import HeaderBlock from '@/blocks/HeaderBlock.vue';
-import SoftlineBlock from '@/blocks/AboutBlock.vue';
+import SoftlineBlock from '@/blocks/CompanyBlock.vue';
 import GalleryBlock from '@/blocks/GalleryBlock.vue';
+import MapBlock from '@/blocks/MapBlock.vue';
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import GalleryBlock from '@/blocks/GalleryBlock.vue';
         <HeaderBlock />
         <main class="main">
             <SoftlineBlock />
+            <MapBlock />
             <MissionBlock />
             <TrendsBlock />
             <BenefitsBlock />
@@ -20,4 +22,9 @@ import GalleryBlock from '@/blocks/GalleryBlock.vue';
     </section>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.page {
+    display: flex;
+    flex-direction: column;
+}
+</style>

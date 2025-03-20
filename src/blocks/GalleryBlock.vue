@@ -9,12 +9,19 @@ const galleryData = SLIDE_DATA;
 <template>
     <section class="gallery">
         <h2 class="gallery__title">Корпоративная жизнь</h2>
-        <Carousel :items-to-show="1">
+        <Carousel :items-to-show="1" wrapAround>
             <Slide v-for="slide in galleryData" :key="slide">
                 <img class="carousel__item" :src="slide" alt="Корпоративная жизнь" />
             </Slide>
             <template #addons>
-                <Navigation />
+                <Navigation>
+                    <template #prev>
+                        <span class="gallery__button-icon"></span>
+                    </template>
+                    <template #next>
+                        <span class="gallery__button-icon rotate"></span>
+                    </template>
+                </Navigation>
                 <Pagination />
             </template>
         </Carousel>
@@ -26,18 +33,34 @@ const galleryData = SLIDE_DATA;
 @use '@/assets/mixins';
 
 .gallery {
-    padding: 70px;
+    padding-top: 93px;
+    padding-bottom: 93px;
+    margin-left: 70px;
+    margin-right: 70px;
+
+    @media screen and (max-width: 719px) {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 
     &__title {
         @include mixins.base--typography(56px, 100%, 600);
         margin-bottom: 50px;
+
+        @media screen and (max-width: 719px) {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__button-icon {
+        @include mixins.image-cover('@/images/icons/arrow.svg', 10px, 20px, cover);
     }
 }
 .carousel {
     width: 100%;
-    //margin-left: auto;
-    //margin-right: auto;
-    //position: relative;
 
     &::v-deep(.carousel__pagination) {
         gap: 10px;
@@ -46,6 +69,18 @@ const galleryData = SLIDE_DATA;
 
     &::v-deep(.carousel__pagination-item) {
         width: 214px;
+
+        @media screen and (max-width: 1279px) {
+            width: 150px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            width: 100px;
+        }
+
+        @media screen and (max-width: 719px) {
+            display: none;
+        }
     }
 
     &::v-deep(.carousel__pagination-button) {
@@ -55,6 +90,14 @@ const galleryData = SLIDE_DATA;
         height: 6px;
         margin-top: 0;
         margin-bottom: 0;
+
+        @media screen and (max-width: 1279px) {
+            width: 150px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            width: 100px;
+        }
     }
 
     &::v-deep(.carousel__pagination-button--active) {
@@ -63,6 +106,14 @@ const galleryData = SLIDE_DATA;
         height: 6px;
         margin: 0;
         opacity: 1;
+
+        @media screen and (max-width: 1279px) {
+            width: 150px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            width: 100px;
+        }
     }
 
     &::v-deep(.carousel__prev) {
@@ -73,6 +124,10 @@ const galleryData = SLIDE_DATA;
         height: 56px;
         border-radius: 64.29px;
         background-color: var(--base-grey-color);
+
+        @media screen and (max-width: 1279px) {
+            display: none;
+        }
     }
 
     &::v-deep(.carousel__icon) {
@@ -88,10 +143,18 @@ const galleryData = SLIDE_DATA;
         height: 56px;
         border-radius: 64.29px;
         background-color: var(--base-grey-color);
+
+        @media screen and (max-width: 1279px) {
+            display: none;
+        }
     }
 }
 .carousel__slide {
     height: 834px;
+
+    @media screen and (max-width: 1279px) {
+        height: auto;
+    }
 }
 .carousel__item {
     height: 834px;
@@ -103,5 +166,10 @@ const galleryData = SLIDE_DATA;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1279px) {
+        width: 100%;
+        height: auto;
+    }
 }
 </style>
