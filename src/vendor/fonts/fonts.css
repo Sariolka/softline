@@ -1,0 +1,81 @@
+/* 'Proxima Nova Condensed' 400 */
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('Proxima-Regular'),
+        url('ProximaNovaCond-Regular.woff2') format('woff2'),
+        local('Proxima-Regular'),
+        url('ProximaNovaCond-Regular.woff') format('woff');
+}
+
+/* 'Proxima Nova Condensed' 600 */
+
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        local('Proxima-SemiBold'),
+        url('ProximaNovaCond-Semibold.woff2') format('woff2'),
+        local('Proxima-SemiBold'),
+        url('ProximaNovaCond-Semibold.woff') format('woff');
+}
+
+/* 'Proxima Nova Condensed' 700 */
+
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        local('Proxima-Bold'),
+        url('ProximaNovaCond-Bold.woff2') format('woff2'),
+        local('Proxima-Bold'),
+        url('ProximaNovaCond-Bold.woff') format('woff');
+}
+
+/* 'Proxima Nova Condensed' 900 */
+
+@font-face {
+    font-family: 'Proxima Nova Condensed';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src:
+        local('Proxima-Black'),
+        url('ProximaNovaCond-Black.woff2') format('woff2'),
+        local('Proxima-Black'),
+        url('ProximaNovaCond-Black.woff') format('woff');
+}
+
+/* 'Proxima Nova' 400 */
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        local('ProximaN-Regular'),
+        url('ProximaNova-Regular.woff2') format('woff2'),
+        local('ProximaN-Regular'),
+        url('ProximaNova-Regular.woff') format('woff');
+}
+
+/* 'Proxima Nova' 600 */
+
+@font-face {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        local('ProximaN-SemiBold'),
+        url('ProximaNova-Semibold.woff') format('woff2'),
+        local('ProximaN-SemiBold'),
+        url('ProximaNova-Semibold.woff') format('woff');
+}

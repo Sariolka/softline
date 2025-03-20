@@ -1,0 +1,19 @@
+//------------------- Typography ---------------
+@mixin base--typography($font-size, $line-height, $weight, $letter-spacing: 0) {
+    @extend %base-font;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+//------------------- Image ---------------
+@mixin image-cover($background-image, $width, $height, $background-size) {
+    background-image: url($background-image);
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $background-size;
+}
