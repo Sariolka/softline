@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import StatisticItem from '@/components/StatisticItem.vue';
 
+// В десктопной версии отсутствует блок со статистикой...
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import StatisticItem from '@/components/StatisticItem.vue';
             IT-решения, облака, программное и&nbsp;аппаратное обеспечение, решения по&nbsp;цифровой
             трансформации и&nbsp;кибербезопасности, а&nbsp;также широкий спектр IT-услуг.
         </p>
-        <div class="block__statistic-container"> //В десктопной версии отсутствует...
+        <div class="block__statistic-container">
             <StatisticItem title="30 лет" text="на IT-рынке" left-sign />
             <StatisticItem title="4600" text="сотрудников в России" />
             <StatisticItem title="25" text="городов России" />
