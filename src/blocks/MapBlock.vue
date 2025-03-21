@@ -229,7 +229,6 @@ watch(activeTab, (newTab) => {
             width: 90%;
         }
 
-
         @media screen and (max-width: 719px) {
             min-width: 700px;
             width: calc(100vw - 40px);
