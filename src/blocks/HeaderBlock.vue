@@ -40,6 +40,8 @@ import logo from '@/images/logo.png';
 
     @media screen and (max-width: 719px) {
         padding: 15px 0 15px 5px;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     &__logo {

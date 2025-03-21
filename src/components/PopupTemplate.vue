@@ -1,8 +1,10 @@
 <script setup lang="ts">
+
 const props = defineProps<{
     isOpen: boolean;
     handleCloseModal: () => void;
 }>();
+
 </script>
 
 <template>

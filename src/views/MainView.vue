@@ -26,5 +26,10 @@ import MapBlock from '@/blocks/MapBlock.vue';
 .page {
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 719px) {
+       padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 </style>

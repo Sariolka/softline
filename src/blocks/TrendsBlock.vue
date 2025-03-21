@@ -59,19 +59,17 @@ const trends = TRENDS_DATA;
         @media screen and (max-width: 719px) {
             grid-template-columns: repeat(2, 1fr);
             display: grid;
-            align-items: center;
-            margin-left: 20px;
-            margin-right: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
             gap: 10px;
-            width: calc(100vw - 30px);
+            width: calc(100vw - 40px);
+            align-items: start;
         }
 
         @media screen and (max-width: 585px) {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-left: 20px;
-            margin-right: 20px;
             gap: 10px;
         }
     }
