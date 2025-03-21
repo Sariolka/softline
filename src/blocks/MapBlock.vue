@@ -23,7 +23,7 @@ watch(activeTab, (newTab) => {
     currentMap.value = selectedMap ? selectedMap : MAP_DATA[0];
 });
 
-//Не работала с картами, поэтому не знаю, как их лучше масштабировать
+//Не работала с картами, поэтому не знаю, как их лучше масштабировать. Мобильной версии, кажется (?), если сделать по макету, то часть карты не вмещается
 </script>
 
 <template>
@@ -229,9 +229,8 @@ watch(activeTab, (newTab) => {
             width: 90%;
         }
 
-
         @media screen and (max-width: 719px) {
-            min-width: 840px;
+            min-width: 700px;
             width: calc(100vw - 40px);
             left: -5px;
         }
