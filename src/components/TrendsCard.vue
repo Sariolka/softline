@@ -84,7 +84,8 @@ onUnmounted(() => {
     z-index: 0;
 
     @media screen and (max-width: 719px) {
-        width: 280px;
+        min-width: 280px;
+        width: 100%;
         height: 60px;
         transition: height 0.3s ease;
         transform-origin: top;
@@ -93,7 +94,6 @@ onUnmounted(() => {
 
     @media screen and (max-width: 585px) {
         min-width: 280px;
-        width: 90%;
         height: 60px;
         transition: height 0.3s ease;
         transform-origin: top;
