@@ -48,7 +48,7 @@ onUnmounted(() => {
                 <button
                     class="trend-card__btn-open"
                     aria-label="Открыть описание"
-                    :class="{ rotate: isOpen && isMobile }"
+                    :class="{ rotateY: isOpen && isMobile }"
                 ></button>
             </div>
             <p
@@ -226,7 +226,12 @@ onUnmounted(() => {
             position: relative;
             z-index: 2;
             cursor: pointer;
+            transition: transform .3s ease;
         }
     }
+}
+
+.rotateY {
+    transform: rotateX(180deg);
 }
 </style>
