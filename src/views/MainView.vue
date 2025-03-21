@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import MissionBlock from '@/blocks/MissionBlock.vue';
-import TrendsBlock from '@/blocks/TrendsBlock.vue';
-import BenefitsBlock from '@/blocks/BenefitsBlock.vue';
-import HeaderBlock from '@/blocks/HeaderBlock.vue';
-import SoftlineBlock from '@/blocks/CompanyBlock.vue';
-import GalleryBlock from '@/blocks/GalleryBlock.vue';
-import MapBlock from '@/blocks/MapBlock.vue';
+import MissionBlock from '@/layouts/MissionBlock.vue';
+import TrendsBlock from '@/layouts/TrendsBlock.vue';
+import BenefitsBlock from '@/layouts/BenefitsBlock.vue';
+import HeaderBlock from '@/layouts/HeaderBlock.vue';
+import SoftlineBlock from '@/layouts/CompanyBlock.vue';
+import GalleryBlock from '@/layouts/GalleryBlock.vue';
+import MapBlock from '@/layouts/MapBlock.vue';
 </script>
 
 <template>
