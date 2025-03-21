@@ -22,6 +22,8 @@ watch(activeTab, (newTab) => {
     );
     currentMap.value = selectedMap ? selectedMap : MAP_DATA[0];
 });
+
+//Не работала с картами, поэтому не знаю, как их лучше масштабировать
 </script>
 
 <template>
@@ -31,7 +33,7 @@ watch(activeTab, (newTab) => {
             <button class="map-block__nav-button">
                 Офисы Softline<span
                     class="map-block__icon-arrow"
-                    :class="{ rotate: isOfficeListOpen }"
+                    :class="{ 'map-block__icon-arrow_rotate': isOfficeListOpen }"
                     @click="handleToggleOfficeList"
                 ></span>
             </button>
@@ -96,12 +98,20 @@ watch(activeTab, (newTab) => {
 .map-block {
     margin-bottom: 100px;
 
+    @media screen and (max-width: 1279px) {
+        margin-bottom: 5%;
+    }
+
+    @media screen and (max-width: 719px) {
+        margin-bottom: 30px;
+    }
+
     &__nav-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
         box-shadow: 0 0 40px 0 #0000000f;
-        padding: 26px 70px 28px 64px;
+        padding: 26px 70px 0 64px;
         position: relative;
 
         @media screen and (max-width: 1279px) {
@@ -115,7 +125,6 @@ watch(activeTab, (newTab) => {
         @media screen and (max-width: 719px) {
             padding-top: 10px;
             padding-left: 15px;
-            overflow-x: auto;
             padding-bottom: 0;
         }
     }
@@ -132,6 +141,8 @@ watch(activeTab, (newTab) => {
         @media screen and (max-width: 719px) {
             margin-left: 5px;
             gap: 16.5px;
+            overflow-x: auto;
+            max-width: 100%;
         }
     }
 
@@ -149,7 +160,7 @@ watch(activeTab, (newTab) => {
 
         @media screen and (max-width: 719px) {
             font-size: 20px;
-            gap: 4px;
+            gap: 7px;
         }
     }
 
@@ -159,9 +170,17 @@ watch(activeTab, (newTab) => {
 
         @media screen and (max-width: 719px) {
             background-image: url('@/images/icons/dropdown-thin.svg');
-            width: 20px;
+            width: 22px;
             height: 20px;
             transform: rotate(180deg);
+        }
+
+        &_rotate {
+            transform: rotate(180deg);
+
+            @media screen and (max-width: 719px) {
+                transform: rotate(0);
+            }
         }
     }
 
@@ -172,7 +191,21 @@ watch(activeTab, (newTab) => {
         padding-right: 30px;
         position: relative;
         height: 691.5px;
-        //overflow-x: auto;
+        overflow-y: hidden;
+        overflow-x: auto;
+
+        @media screen and (max-width: 1190px) {
+            height: 650px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            height: 570px;
+        }
+
+        @media screen and (max-width: 719px) {
+            height: 400px;
+            padding-top: 10px;
+        }
     }
 
     &__image {
@@ -181,14 +214,21 @@ watch(activeTab, (newTab) => {
         max-width: 1190px;
         object-fit: contain;
         object-position: center;
-        //overflow-x: auto;
+        width: 100%;
 
         @media screen and (max-width: 1279px) {
-            max-width: 900px;
+            min-width: 700px;
+            width: 98%;
+        }
+
+        @media screen and (max-width: 1023px) {
+            min-width: 800px;
+            width: 100%;
         }
 
         @media screen and (max-width: 719px) {
-            max-width: 870px;
+            min-width: 770px;
+            width: 100%;
         }
     }
 }

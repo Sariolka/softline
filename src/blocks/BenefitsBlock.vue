@@ -73,6 +73,7 @@ const additionals = ADDITIONAL_DATA;
 
         @media screen and (max-width: 719px) {
             margin-bottom: 22px;
+            width: 95%;
         }
     }
 

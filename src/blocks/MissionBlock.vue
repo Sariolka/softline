@@ -28,6 +28,11 @@
     overflow: hidden;
     margin-bottom: 100px;
 
+    @media screen and (max-width: 1279px) {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
     @media screen and (max-width: 719px) {
         padding: 32px 5px;
         margin-left: 15px;

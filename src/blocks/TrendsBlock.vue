@@ -63,10 +63,10 @@ const trends = TRENDS_DATA;
             margin-left: 20px;
             margin-right: 20px;
             gap: 10px;
+            width: calc(100vw - 30px);
         }
 
         @media screen and (max-width: 585px) {
-            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
