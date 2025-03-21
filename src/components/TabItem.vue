@@ -31,7 +31,7 @@ const handleSetActive = () => {
 
 .tab-item {
     display: flex;
-    padding-bottom: 26px;
+    padding-bottom: 27px;
 
     @media screen and (max-width: 719px) {
         padding-bottom: 20px;

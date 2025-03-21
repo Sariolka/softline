@@ -39,8 +39,8 @@ const galleryData = SLIDE_DATA;
     margin-right: 70px;
 
     @media screen and (max-width: 719px) {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
         padding-top: 50px;
         padding-bottom: 50px;
     }

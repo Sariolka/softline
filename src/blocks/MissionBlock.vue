@@ -35,8 +35,8 @@
 
     @media screen and (max-width: 719px) {
         padding: 32px 5px;
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 0;
+        margin-right: 0;
         margin-bottom: 50px;
     }
 

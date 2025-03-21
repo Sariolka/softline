@@ -41,16 +41,17 @@ const additionals = ADDITIONAL_DATA;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 80px 30px 40px;
+    padding: 80px 30px 30px;
+    margin-bottom: 9px;
     background-color: var(--base-white);
     box-shadow: 0 0 40px 0 #0000000f;
     margin-left: 70px;
     margin-right: 70px;
 
     @media screen and (max-width: 719px) {
-        padding: 20px 0 0;
-        margin-left: 15px;
-        margin-right: 15px;
+        padding: 20px 5px 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     &__title {
@@ -122,7 +123,9 @@ const additionals = ADDITIONAL_DATA;
     }
 
     &__li-item {
-        width: 94px;
+        @media screen and (max-width: 719px) {
+            width: 94px;
+        }
     }
 }
 </style>

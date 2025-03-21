@@ -96,14 +96,14 @@ watch(activeTab, (newTab) => {
 @use '@/assets/mixins';
 
 .map-block {
-    margin-bottom: 100px;
+    margin-bottom: 104px;
 
     @media screen and (max-width: 1279px) {
         margin-bottom: 5%;
     }
 
     @media screen and (max-width: 719px) {
-        margin-bottom: 30px;
+        margin-bottom: 23px;
     }
 
     &__nav-container {
@@ -111,7 +111,7 @@ watch(activeTab, (newTab) => {
         align-items: center;
         justify-content: space-between;
         box-shadow: 0 0 40px 0 #0000000f;
-        padding: 26px 70px 0 64px;
+        padding: 30px 70px 1px 64px;
         position: relative;
 
         @media screen and (max-width: 1279px) {
@@ -123,9 +123,8 @@ watch(activeTab, (newTab) => {
         }
 
         @media screen and (max-width: 719px) {
-            padding-top: 10px;
-            padding-left: 15px;
-            padding-bottom: 0;
+            padding-top: 13px;
+            padding-left: 0;
         }
     }
 
@@ -149,7 +148,7 @@ watch(activeTab, (newTab) => {
     &__nav-button {
         display: flex;
         align-items: center;
-        gap: 18px;
+        gap: 16px;
         border: none;
         background-color: transparent;
         @include mixins.base--typography(24px, 100%, 600);
@@ -157,6 +156,7 @@ watch(activeTab, (newTab) => {
         cursor: pointer;
         position: relative;
         z-index: 11;
+        align-self: start;
 
         @media screen and (max-width: 719px) {
             font-size: 20px;
@@ -198,8 +198,16 @@ watch(activeTab, (newTab) => {
             height: 650px;
         }
 
-        @media screen and (max-width: 1023px) {
-            height: 570px;
+        @media screen and (max-width: 1043px) {
+            height: 600px;
+        }
+
+        @media screen and (max-width: 950px) {
+            height: 540px;
+        }
+
+        @media screen and (max-width: 869px) {
+            height: 480px;
         }
 
         @media screen and (max-width: 719px) {
@@ -217,18 +225,15 @@ watch(activeTab, (newTab) => {
         width: 100%;
 
         @media screen and (max-width: 1279px) {
-            min-width: 700px;
-            width: 98%;
+            min-width: 670px;
+            width: 90%;
         }
 
-        @media screen and (max-width: 1023px) {
-            min-width: 800px;
-            width: 100%;
-        }
 
         @media screen and (max-width: 719px) {
-            min-width: 770px;
-            width: 100%;
+            min-width: 840px;
+            width: calc(100vw - 40px);
+            left: -5px;
         }
     }
 }

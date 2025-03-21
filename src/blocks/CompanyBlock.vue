@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import StatisticItem from '@/components/StatisticItem.vue';
+
 </script>
 
 <template>
@@ -10,7 +11,7 @@ import StatisticItem from '@/components/StatisticItem.vue';
             IT-решения, облака, программное и&nbsp;аппаратное обеспечение, решения по&nbsp;цифровой
             трансформации и&nbsp;кибербезопасности, а&nbsp;также широкий спектр IT-услуг.
         </p>
-        <div class="block__hidden-container">
+        <div class="block__statistic-container"> //В десктопной версии отсутствует...
             <StatisticItem title="30 лет" text="на IT-рынке" left-sign />
             <StatisticItem title="4600" text="сотрудников в России" />
             <StatisticItem title="25" text="городов России" />
@@ -34,7 +35,7 @@ import StatisticItem from '@/components/StatisticItem.vue';
     align-items: center;
     padding: 40px 70px;
     gap: 32px;
-    margin-bottom: 38px;
+    margin-bottom: 35px;
 
     @media screen and (max-width: 1279px) {
         padding-left: 30px;
@@ -42,8 +43,8 @@ import StatisticItem from '@/components/StatisticItem.vue';
     }
 
     @media screen and (max-width: 719px) {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
         align-items: start;
         gap: 10px;
         padding-top: 9px;
@@ -59,7 +60,7 @@ import StatisticItem from '@/components/StatisticItem.vue';
         @media screen and (max-width: 719px) {
             font-size: 28px;
             text-align: start;
-            margin-left: 3px;
+            margin-left: 0;
         }
     }
 
@@ -72,13 +73,13 @@ import StatisticItem from '@/components/StatisticItem.vue';
             line-height: 118%;
             font-size: 16px;
             text-align: start;
-            margin-left: 4px;
-            padding-right: 10px;
+            margin-left: 0;
+            margin-right: 10px;
             margin-bottom: 40px;
         }
     }
 
-    &__hidden-container {
+    &__statistic-container {
         display: none;
 
         @media screen and (max-width: 719px) {

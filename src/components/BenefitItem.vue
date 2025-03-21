@@ -3,6 +3,7 @@ const props = defineProps<{
     image: string;
     caption: string;
 }>();
+
 </script>
 
 <template>
@@ -57,6 +58,8 @@ const props = defineProps<{
     &__icon {
         object-fit: contain;
         object-position: center;
+        height: 48px;
+
         @media screen and (max-width: 719px) {
             height: 34.9px;
         }

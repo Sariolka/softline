@@ -12,7 +12,7 @@ const isMobile = ref(false);
 const isOpen = ref(false);
 
 const checkScreenWidth = () => {
-    isMobile.value = window.innerWidth < 700;
+    isMobile.value = window.innerWidth < 719;
 };
 
 onMounted(() => {
