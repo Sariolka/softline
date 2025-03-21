@@ -81,9 +81,9 @@
         opacity: 0.4;
 
         @media screen and (max-width: 719px) {
-            top: 20px;
-            width: 140px;
-            height: 153px;
+            top: 15px;
+            width: 129px;
+            height: 140px;
         }
 
         &_type-left {
