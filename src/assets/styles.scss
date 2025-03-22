@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import 'constants.scss';
+@import '@/assets/fonts/fonts.css';
 
 :root {
     --base-white: rgba(255, 255, 255, 1);
@@ -36,4 +36,11 @@ body {
 }
 .rotate {
     transform: rotate(180deg);
+}
+
+#app {
+    max-width: 1250px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }

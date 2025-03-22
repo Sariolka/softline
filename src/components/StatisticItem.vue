@@ -6,7 +6,6 @@ const props = defineProps<{
     plus?: boolean; //не самое лучшее решение, но другое как будто не обязательно в условиях лендинга )
     leftSign?: boolean;
 }>();
-
 </script>
 
 <template>

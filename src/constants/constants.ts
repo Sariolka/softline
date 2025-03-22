@@ -1,33 +1,33 @@
-import img1 from '../images/tech.png';
-import img2 from '../images/сybersecurity.png';
-import img3 from '../images/import_substitution.png';
-import img4 from '../images/cloud_solutions.png';
-import img5 from '../images/transform.png';
-import img6 from '../images/solutions.png';
+import img1 from '../assets/images/tech.webp';
+import img2 from '../assets/images/сybersecurity.webp';
+import img3 from '../assets/images/import_substitution.webp';
+import img4 from '../assets/images/cloud_solutions.webp';
+import img5 from '../assets/images/transform.webp';
+import img6 from '../assets/images/solutions.webp';
 //------------------------------------------
-import med from '../images/icons/med.svg';
-import bd from '../images/icons/bday.svg';
-import phone from '../images/icons/phone.svg';
-import fit from '../images/icons/fit.svg';
-import hands from '../images/icons/hands.svg';
-import house from '../images/icons/house.svg';
-import tech from '../images/icons/tech.svg';
+import med from '../assets/images/icons/med.svg';
+import bd from '../assets/images/icons/bday.svg';
+import phone from '../assets/images/icons/phone.svg';
+import fit from '../assets/images/icons/fit.svg';
+import hands from '../assets/images/icons/hands.svg';
+import house from '../assets/images/icons/house.svg';
+import tech from '../assets/images/icons/tech.svg';
 //------------------------------------------
-import slide1 from '../images/Слайд1.png';
-import slide2 from '../images/Слайд2.png';
-import slide3 from '../images/Слайд3.png';
-import slide4 from '../images/Слайд4.png';
-import slide5 from '../images/Слайд5.png';
+import slide1 from '../assets/images/Слайд1.webp';
+import slide2 from '../assets/images/Слайд2.webp';
+import slide3 from '../assets/images/Слайд3.webp';
+import slide4 from '../assets/images/Слайд4.webp';
+import slide5 from '../assets/images/Слайд5.webp';
 //------------------------------------------
-import all from '../images/all.png';
-import moscow from '../images/moscow.png';
-import centre from '../images/centre.png';
-import volga from '../images/volga.png';
-import fareast from '../images/thefareast.png';
-import south from '../images/south.png';
-import ural from '../images/ural.png';
-import siberia from '../images/siberia.png';
-import north from '../images/northwest.png';
+import all from '../assets/images/all.png';
+import moscow from '../assets/images/moscow.png';
+import centre from '../assets/images/centre.png';
+import volga from '../assets/images/volga.png';
+import fareast from '../assets/images/thefareast.png';
+import south from '../assets/images/south.png';
+import ural from '../assets/images/ural.png';
+import siberia from '../assets/images/siberia.png';
+import north from '../assets/images/northwest.png';
 
 export const TRENDS_DATA = [
     {

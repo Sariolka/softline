@@ -3,14 +3,13 @@ const props = defineProps<{
     image: string;
     caption: string;
 }>();
-
 </script>
 
 <template>
     <li class="compensation-item">
         <figure class="compensation-item__content">
             <div class="compensation-item__image">
-                <img class="compensation-item__icon" :src="image" :alt="caption" />
+                <img class="compensation-item__icon" :src="image" alt="изображение" />
             </div>
 
             <figcaption class="compensation-item__description">{{ caption }}</figcaption>

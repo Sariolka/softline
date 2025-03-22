@@ -56,7 +56,7 @@ const galleryData = SLIDE_DATA;
     }
 
     &__button-icon {
-        @include mixins.image-cover('@/images/icons/arrow.svg', 10px, 20px, cover);
+        @include mixins.image-cover('@/assets/images/icons/arrow.svg', 10px, 20px, cover);
     }
 }
 .carousel {
