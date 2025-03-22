@@ -168,7 +168,7 @@ const handleToggleOpen = (region: string) => {
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            background-image: url('@/images/icons/arrow-fill.svg');
+            background-image: url('@/assets/images/icons/arrow-fill.svg');
             border: none;
             background-color: transparent;
             width: 5px;

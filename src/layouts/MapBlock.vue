@@ -165,11 +165,11 @@ watch(activeTab, (newTab) => {
     }
 
     &__icon-arrow {
-        @include mixins.image-cover('@/images/icons/dropdown.svg', 24px, 24px, contain);
+        @include mixins.image-cover('@/assets/images/icons/dropdown.svg', 24px, 24px, contain);
         transition: transform 0.3s ease-in-out;
 
         @media screen and (max-width: 719px) {
-            background-image: url('@/images/icons/dropdown-thin.svg');
+            background-image: url('@/assets/images/icons/dropdown-thin.svg');
             width: 22px;
             height: 20px;
             transform: rotate(180deg);

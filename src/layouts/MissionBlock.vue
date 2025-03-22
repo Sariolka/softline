@@ -77,7 +77,7 @@
     &__pattern {
         top: 47.5px;
         position: absolute;
-        @include mixins.image-cover('@/images/pattern.svg', 348.05px, 376.95px, contain);
+        @include mixins.image-cover('@/assets/images/pattern.svg', 348.05px, 376.95px, contain);
         opacity: 0.4;
 
         @media screen and (max-width: 719px) {

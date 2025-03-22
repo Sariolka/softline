@@ -216,7 +216,7 @@ onUnmounted(() => {
 
         @media screen and (max-width: 719px) {
             display: inline-flex;
-            background-image: url('@/images/icons/dropdown-white.svg');
+            background-image: url('@/assets/images/icons/dropdown-white.svg');
             border: none;
             background-color: transparent;
             background-repeat: no-repeat;
@@ -226,7 +226,7 @@ onUnmounted(() => {
             position: relative;
             z-index: 2;
             cursor: pointer;
-            transition: transform .3s ease;
+            transition: transform 0.3s ease;
         }
     }
 }
