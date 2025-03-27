@@ -14,7 +14,7 @@ const handleSetActive = () => {
 </script>
 
 <template>
-    <div class="tab-item" :class="{ 'tab-item_active': status === 'active' }">
+    <li class="tab-item" :class="{ 'tab-item_active': status === 'active' }">
         <h2
             class="tab-item__text"
             @click="handleSetActive"
@@ -22,7 +22,7 @@ const handleSetActive = () => {
         >
             {{ text }}
         </h2>
-    </div>
+    </li>
 </template>
 
 <style scoped lang="scss">

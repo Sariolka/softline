@@ -22,8 +22,6 @@ watch(activeTab, (newTab) => {
     );
     currentMap.value = selectedMap ? selectedMap : MAP_DATA[0];
 });
-
-//Не работала с картами, поэтому не знаю, как их лучше масштабировать. Мобильной версии, кажется (?), если сделать по макету, то часть карты не вмещается
 </script>
 
 <template>
@@ -37,7 +35,7 @@ watch(activeTab, (newTab) => {
                     @click="handleToggleOfficeList"
                 ></span>
             </button>
-            <nav class="map-block__nav-tabs">
+            <ul class="map-block__nav-tabs">
                 <TabItem
                     text="Все"
                     :status="activeTab === 'all' ? 'active' : 'default'"
@@ -83,7 +81,7 @@ watch(activeTab, (newTab) => {
                     :status="activeTab === 'The Far East' ? 'active' : 'default'"
                     @click="handleTabChange('The Far East')"
                 />
-            </nav>
+            </ul>
         </div>
         <div class="map-block__content">
             <img :src="currentMap.image" :alt="currentMap.text" class="map-block__image" />
@@ -132,6 +130,7 @@ watch(activeTab, (newTab) => {
         display: flex;
         align-items: center;
         gap: 30.5px;
+        padding-left: 0;
 
         @media screen and (max-width: 1279px) {
             gap: 20px;

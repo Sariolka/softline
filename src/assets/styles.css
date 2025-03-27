@@ -1,46 +1,48 @@
 @import 'normalize.css';
 @import '@/assets/fonts/fonts.css';
 :root {
-  --base-white: rgba(255, 255, 255, 1);
-  --red-color: #cb0f41;
-  --red-text-color: #b01736;
-  --red-dark-color: #a30c33;
-  --dark-blue-color: #2d3653;
-  --base-black: #000;
-  --black-text-color: #444444;
-  --border-grey-color: #d9d9d9;
-  --base-grey-color: #f0f0f0;
+    --base-white: rgba(255, 255, 255, 1);
+    --red-color: #cb0f41;
+    --red-text-color: #b01736;
+    --red-dark-color: #a30c33;
+    --dark-blue-color: #2d3653;
+    --base-black: #000;
+    --black-text-color: #444444;
+    --border-grey-color: #d9d9d9;
+    --base-grey-color: #f0f0f0;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
-  min-height: 100vh;
-  color: var(--black-text-color);
-  background: var(--base-white);
-  transition: color 0.5s, background-color 0.5s;
-  line-height: 1.6;
-  font-family: "Proxima Nova Condensed", "Arial", sans-serif;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    color: var(--black-text-color);
+    background: var(--base-white);
+    transition:
+        color 0.5s,
+        background-color 0.5s;
+    line-height: 1.6;
+    font-family: 'Proxima Nova Condensed', 'Arial', sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .rotate {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 #app {
-  max-width: 1250px;
-  min-width: 320px;
-  margin: 0 auto;
-  box-sizing: border-box;
+    max-width: 1250px;
+    min-width: 320px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /*# sourceMappingURL=styles.css.map */
