@@ -30,10 +30,10 @@ watch(activeTab, (newTab) => {
             <ModalWindow :handle-close-modal="handleToggleOfficeList" :is-open="isOfficeListOpen" />
             <button class="map-block__nav-button">
                 Офисы Softline<span
-                    class="map-block__icon-arrow"
-                    :class="{ 'map-block__icon-arrow_rotate': isOfficeListOpen }"
-                    @click="handleToggleOfficeList"
-                ></span>
+                class="map-block__icon-arrow"
+                :class="{ 'map-block__icon-arrow_rotate': isOfficeListOpen }"
+                @click="handleToggleOfficeList"
+            ></span>
             </button>
             <ul class="map-block__nav-tabs">
                 <TabItem
