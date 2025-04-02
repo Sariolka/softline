@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import StatisticItem from '@/components/StatisticItem.vue';
-
-// В десктопной версии отсутствует блок со статистикой...
 </script>
 
 <template>
@@ -81,18 +79,25 @@ import StatisticItem from '@/components/StatisticItem.vue';
     }
 
     &__statistic-container {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+        margin-top: 30px;
+        gap: 10px;
+        margin-right: auto;
+        margin-left: auto;
 
-        @media screen and (max-width: 719px) {
-            display: flex;
-            flex-wrap: wrap;
+        @media screen and (max-width: 875px) {
             justify-content: center;
-            gap: 10px;
+            margin-top: 0;
         }
     }
 
     &__statistic-item {
-        margin-left: 25px;
+        @media screen and (max-width: 719px) {
+            margin-left: 25px;
+        }
     }
 }
 </style>
