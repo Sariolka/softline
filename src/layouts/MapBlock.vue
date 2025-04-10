@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import TabItem from '@/components/TabItem.vue';
-import { MAP_DATA } from '@/constants/constants.ts';
+import { dataTabs, MAP_DATA } from '@/constants/constants.ts';
 import ModalWindow from '@/components/ModalWindow.vue';
 
 const activeTab = ref('all');
@@ -28,58 +28,19 @@ watch(activeTab, (newTab) => {
     <section class="map-block">
         <div class="map-block__nav-container">
             <ModalWindow :handle-close-modal="handleToggleOfficeList" :is-open="isOfficeListOpen" />
-            <button class="map-block__nav-button">
+            <button class="map-block__nav-button"  @click="handleToggleOfficeList">
                 Офисы Softline<span
                 class="map-block__icon-arrow"
                 :class="{ 'map-block__icon-arrow_rotate': isOfficeListOpen }"
-                @click="handleToggleOfficeList"
             ></span>
             </button>
             <ul class="map-block__nav-tabs">
                 <TabItem
-                    text="Все"
-                    :status="activeTab === 'all' ? 'active' : 'default'"
-                    @click="handleTabChange('all')"
-                />
-                <TabItem
-                    text="Москва"
-                    :status="activeTab === 'Moscow' ? 'active' : 'default'"
-                    @click="handleTabChange('Moscow')"
-                />
-                <TabItem
-                    text="Центр"
-                    :status="activeTab === 'Centre' ? 'active' : 'default'"
-                    @click="handleTabChange('Centre')"
-                />
-                <TabItem
-                    text="Северо-Запад"
-                    :status="activeTab === 'northwest' ? 'active' : 'default'"
-                    @click="handleTabChange('northwest')"
-                />
-                <TabItem
-                    text="Юг"
-                    :status="activeTab === 'south' ? 'active' : 'default'"
-                    @click="handleTabChange('south')"
-                />
-                <TabItem
-                    text="Волга"
-                    :status="activeTab === 'Volga' ? 'active' : 'default'"
-                    @click="handleTabChange('Volga')"
-                />
-                <TabItem
-                    text="Урал"
-                    :status="activeTab === 'Ural' ? 'active' : 'default'"
-                    @click="handleTabChange('Ural')"
-                />
-                <TabItem
-                    text="Сибирь"
-                    :status="activeTab === 'Siberia' ? 'active' : 'default'"
-                    @click="handleTabChange('Siberia')"
-                />
-                <TabItem
-                    text="Дальний восток"
-                    :status="activeTab === 'The Far East' ? 'active' : 'default'"
-                    @click="handleTabChange('The Far East')"
+                    v-for="tab in dataTabs"
+                    :key="tab.id"
+                    :text="tab.text"
+                    :status="activeTab === tab.id ? 'active' : 'default'"
+                    @click="handleTabChange(tab.id)"
                 />
             </ul>
         </div>
@@ -156,7 +117,8 @@ watch(activeTab, (newTab) => {
         position: relative;
         z-index: 11;
         align-self: start;
-
+        color: var(--black-text-color);
+        
         @media screen and (max-width: 719px) {
             font-size: 20px;
             gap: 7px;

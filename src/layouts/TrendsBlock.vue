@@ -49,28 +49,22 @@ const trends = TRENDS_DATA;
         grid-template-columns: repeat(2, 1fr);
         gap: 22.5px 20px;
         padding-left: 0;
-        margin-left: -10px; // я обычно не сдвигаю так, но в макете местами явно указаны отрицательные маржины и паддинги...
 
         @media screen and (max-width: 1279px) {
-            grid-template-columns: repeat(1, 1fr);
-            margin-left: 0;
+            width: calc(100% - 100px);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
 
         @media screen and (max-width: 719px) {
-            grid-template-columns: repeat(2, 1fr);
-            display: grid;
-            padding-left: 5px;
-            padding-right: 5px;
-            gap: 10px;
-            width: calc(100vw - 40px);
-            align-items: start;
-        }
-
-        @media screen and (max-width: 585px) {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
     }
 }
