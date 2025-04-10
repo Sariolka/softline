@@ -78,9 +78,9 @@ onUnmounted(() => {
         observer.unobserve(statisticItem.value);
         observer = null;
     }
-    isAnimated.value = false; //  Останавливаем анимацию
+    isAnimated.value = false;
     if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId); //  Отменяем кадр анимации
+        cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
     }
 });

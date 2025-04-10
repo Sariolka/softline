@@ -63,14 +63,6 @@ const handleSetActive = () => {
 
         &_active {
             color: var(--red-dark-color);
-            //text-decoration: underline;
-            //text-underline-offset: 30px;
-            //text-decoration-thickness: 3px;
-
-            //@media screen and (max-width: 719px) {
-            //    text-underline-offset: 23px;
-            //    text-decoration-thickness: 2px;
-            //}
         }
     }
 }

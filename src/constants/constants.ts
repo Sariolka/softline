@@ -166,3 +166,15 @@ export const CITIES_DATA = {
     Сибирь: ['Новосибирск', 'Омск', 'Томск', 'Красноярск', 'Иркутск'],
     'Дальний Восток': ['Хабаровск', 'Владивосток']
 };
+
+export const dataTabs = [
+    { id: 'all', text: 'Все' },
+    { id: 'Moscow', text: 'Москва' },
+    { id: 'Centre', text: 'Центр' },
+    { id: 'northwest', text: 'Северо-Запад' },
+    { id: 'south', text: 'Юг' },
+    { id: 'Volga', text: 'Волга' },
+    { id: 'Ural', text: 'Урал' },
+    { id: 'Siberia', text: 'Сибирь' },
+    { id: 'The Far East', text: 'Дальний восток' },
+]
