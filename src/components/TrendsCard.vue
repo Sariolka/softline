@@ -82,7 +82,9 @@ onUnmounted(() => {
     overflow: hidden;
     position: relative;
     z-index: 0;
-
+    @media screen and (max-width: 1279px) {
+        width: 100%;
+    }
     @media screen and (max-width: 719px) {
         min-width: 280px;
         width: 100%;

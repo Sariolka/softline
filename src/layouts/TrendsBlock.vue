@@ -51,8 +51,10 @@ const trends = TRENDS_DATA;
         padding-left: 0;
 
         @media screen and (max-width: 1279px) {
-            grid-template-columns: repeat(1, 1fr);
-            margin-left: 0;
+            width: calc(100% - 100px);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
         }
 
         @media screen and (max-width: 719px) {
